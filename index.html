@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Example Lab 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        canvas{
+            display: block;
+            margin-left: 60%;
+            background-color: white;
+        }
+
+        body {
+            background-color: #EEE;
+        }
+
+        .controls{
+            margin-left: 80%;
+            display: flex;
+            flex-direction: row;
+            justify-items: space-between;
+        }
+        .heading-wrapper {
+            
+            border: 2px solid black;
+            padding: 0 10px;
+            margin: auto;
+            position: relative;
+            top: 0; left: 0; bottom: 0; right: 0;
+        }
+        .hr{
+            margin-left: 80%;
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <div class="heading">
+        <div class="heading-wrapper">
+          
+    </div>
+    <div class="controls">
+        <p><label for="full">Full Line</label>
+        <input name="full" type="checkbox" id="full-line">
+        <label for="inner">Inner Line</label>
+        <input name="inner" type="checkbox" id="inner-line" checked></p>
+        
+    </div>
+    <div>
+        <canvas id="canvas"></canvas>
+    </div>
+    <div class="hr">
+        <p><b>Введите координаты верхнего левого маркера:<b><br>
+            X: <input id="firstMarkerX" type="text" placeholder="1-30"><br>
+            Y: <input id="firstMarkerY" type="text" placeholder="1-30"><br>
+        </p>
+        <p><b>Введите координаты нижнего правого маркера:<b><br>
+            X: <input id="secondMarkerX" type="text" placeholder="1-30"><br>
+            Y: <input id="secondMarkerY" type="text" placeholder="1-30"><br>
+        </p>
+        <p><b>Введите координаты верхнего правого маркера (квадрат):<b><br>
+            X: <input id="thirdMarkerX" type="text"placeholder="1-30"><br>
+            Y: <input id="thirdMarkerY" type="text"placeholder="1-30"><br>
+        </p>
+        <p><b>Введите координаты нижнего левого маркера (квадрат):<b><br>
+            X: <input id="fourthMarkerX" type="text"placeholder="1-30"><br>
+            Y: <input id="fourthMarkerY" type="text"placeholder="1-30"><br>
+        </p><br>
+        <input name="send" type="button" value="Подтвердить" onclick="getCoordinates()">
+    </div>
+    
+    <script src="lab2.js"></script>
+</body>
+
+</html>
